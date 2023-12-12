@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        .myClass{baclground: #ffed3b;}
+    </style>
+</head>
+<body>
+    <h1>Entrance</h1>
+    <p>Log in to your account</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <p>{{ field.label_tag }}</p>
+            {{ field }}
+        {% endfor %}
+
+        <button> Рerception </button>
+
+        <p>Ещё не зарегестрированы?</p>
+
+        <button> Registration </button>
+    </form>
+</body>
+</html>
